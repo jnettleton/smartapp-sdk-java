@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath deps.ratpack.gradlePlugin
+        classpath 'io.ratpack:ratpack-gradle:1.9.0'
     }
 }
 
@@ -16,7 +16,7 @@ plugins {
     id 'eclipse'
 }
 
-apply plugin: 'io.ratpack.ratpack-java'
+apply plugin: "io.ratpack.ratpack-java"
 
 group = "examples"
 sourceCompatibility = '1.8'

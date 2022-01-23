@@ -10,6 +10,7 @@ buildscript {
         classpath deps.tools.vfs
         classpath deps.tools.httpclient
         classpath deps.tools.swaggerPlugin
+        classpath "gradle.plugin.org.hidetake:gradle-swagger-generator-plugin:2.19.1"
     }
 }
 
@@ -27,20 +28,20 @@ repositories {
 
 dependencies {
     swaggerCodegen deps.swagger.v2.cli
-    compile deps.swagger.v2.annotations
-    compile deps.logging.slf4j
-    compile deps.serialize.jackson.databind
-    compile deps.bouncycastle.bcpkix
-    compile deps.httpsig.api
-    compile deps.httpsig.sshJce
-    compile deps.httpsig.sshBc
-    compile deps.guava
+    implementation deps.swagger.v2.annotations
+    implementation deps.logging.slf4j
+    implementation deps.serialize.jackson.databind
+    implementation deps.bouncycastle.bcpkix
+    implementation deps.httpsig.api
+    implementation deps.httpsig.sshJce
+    implementation deps.httpsig.sshBc
+    implementation deps.guava
     implementation deps.tools.httpclient
-    testCompile deps.test.guavaTestlib
+    testImplementation deps.test.guavaTestlib
     testImplementation deps.test.spockCore
     testImplementation deps.test.mockito
-    testRuntime deps.test.cglibNodep
-    testRuntime deps.test.objenesis
+    testRuntimeOnly deps.test.cglibNodep
+    testRuntimeOnly deps.test.objenesis
 }
 
 def spec = file("${project.getProjectDir()}/resources/smartapps-v1.yml")

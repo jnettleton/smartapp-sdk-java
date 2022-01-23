@@ -7,9 +7,9 @@ apply from: rootProject.file('gradle/convention.gradle')
 apply from: rootProject.file('gradle/publish-jar.gradle')
 
 dependencies {
-    compile deps.projects.smartappcore
-    compile deps.spring.context
-    compileOnly deps.spring.servletApi
+    implementation deps.projects.smartappcore
+    implementation deps.spring.context
+    implementation deps.spring.servletApi
 
     testImplementation deps.test.spockCore
     testImplementation deps.spring.servletApi

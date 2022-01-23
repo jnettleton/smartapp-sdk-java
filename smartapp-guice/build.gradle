@@ -7,6 +7,6 @@ dependencies {
     implementation deps.projects.smartappcore
     implementation deps.di.guice
     testImplementation deps.test.spockCore
-    testRuntime deps.test.cglibNodep
-    testRuntime deps.test.objenesis
+    testRuntimeOnly deps.test.cglibNodep
+    testRuntimeOnly deps.test.objenesis
 }

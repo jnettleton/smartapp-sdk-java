@@ -1,8 +1,8 @@
 ext.versions = [
     'swagger'  : [
         'v2': [
-            'annotations': '1.5.22',
-            'cli'        : '2.4.5',
+            'annotations': '1.6.4',
+            'cli'        : '2.4.24',
         ]
     ],
     'serialize': [

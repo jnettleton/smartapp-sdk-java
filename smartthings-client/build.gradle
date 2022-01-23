@@ -29,7 +29,7 @@ repositories {
 
 dependencies {
     swaggerCodegen deps.swagger.v2.cli
-    compile deps.swagger.v2.annotations
+    implementation deps.swagger.v2.annotations
 
     implementation deps.codegen.feignCore
     implementation deps.codegen.feignJackson
@@ -39,8 +39,8 @@ dependencies {
     implementation deps.codegen.oltuOauth2
 
     testImplementation deps.test.spockCore
-    testRuntime deps.test.cglibNodep
-    testRuntime deps.test.objenesis
+    testRuntimeOnly deps.test.cglibNodep
+    testRuntimeOnly deps.test.objenesis
 }
 
 def spec = file("${project.getProjectDir()}/resources/st-api.yml")
